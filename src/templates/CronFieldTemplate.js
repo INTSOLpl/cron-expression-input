@@ -46,7 +46,7 @@ export function CronFieldTemplateGenerator (obj, objLang) {
                         </div>
                     </div>
                 </div>
-                <div class='panel panel-default' style='margin: 0px !important; padding: 0px !important; height: 214px;'>
+                <div class='panel panel-default' style='margin: 0px !important; padding: 0px !important;'>
                     <div class='panel-heading'>
                         <div style='display: flex;'> <input class='propagationClass form-check-input' type='radio' name='choise' value='3'
                                 match='choise'> <span style='margin-left: 10px;'>${objLang.choise}</span> </div>

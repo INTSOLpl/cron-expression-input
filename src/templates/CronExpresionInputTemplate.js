@@ -11,25 +11,10 @@ export function CronExpresionInputTemplateGenerator(obj, objLang) {
         </div>
 <small class="cronexpressionError hiden" style="display: none; color: red !important; margin-top: 5px !important; margin-bottom: 5px !important;">${objLang.invalidCron}</small>
 <div class="modal" tabindex="-1">
-    <div class="modal-dialog" style="width: 893px !important;">
-        <div class="modal-content" style="height: 490px !important">
-            <div class="modal-header" style="height: 0px !important; padding-bottom: 30px !important;">
-                <span class="close2 cronClose">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x-circle" fill="${obj.colorMain}" style="font-size: 21px !important;">
-                        <path fill-rule="evenodd"
-                            d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                        <path fill-rule="evenodd"
-                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                    </svg>
-                </span>
-                <span class="close2 cronSave" style="margin-right: 10px;">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check-circle" fill="${obj.colorMain}" style=" font-size: 21px !important;">
-                        <path fill-rule="evenodd"
-                            d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                        <path fill-rule="evenodd"
-                            d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z" />
-                    </svg>
-                </span>
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header" style="height: 0px !important; padding-bottom: 30px !important;">               
+                <button type="button" class="btn-close close2 cronClose" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" style="padding-top: 0px !important;">
                 <ul class="nav nav-tabs" style="margin-top: 0px;">
@@ -58,7 +43,11 @@ export function CronExpresionInputTemplateGenerator(obj, objLang) {
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary cronSave"><i class="bi bi-check"></i>&nbsp;Save</button>
+            <button type="button" class="btn btn-secondary cronClose">Close</button>
+             </div>
+        </div>       
     </div>
 </div>
 `;
