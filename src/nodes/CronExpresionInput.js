@@ -15,6 +15,7 @@ export class CronExpresionInput extends CronComponent {
     }
 
     connectedCallback() {
+        this.name = this.getAttribute("name");
         this.width = this.getAttribute("width");
         this.height = this.getAttribute("height");
         this.required = this.getAttribute("required") == "true";

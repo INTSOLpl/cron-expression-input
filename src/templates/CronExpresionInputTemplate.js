@@ -1,7 +1,7 @@
 export function CronExpresionInputTemplateGenerator(obj, objLang) {
     return ` 
           <div class="cronInput input-group">         
-            <input class="cronInsideInput form-control" type="text" class="form-control" placeholder="${objLang.inputPlaceholder}">
+            <input class="cronInsideInput form-control" name="${obj.name}" type="text" class="form-control" placeholder="${objLang.inputPlaceholder}">
             <div class="input-group-append">
             <a type="button" class="cronButtonUI">
             <div class="input-group-text">         
