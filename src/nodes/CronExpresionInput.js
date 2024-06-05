@@ -53,15 +53,16 @@ export class CronExpresionInput extends CronComponent {
         this.addEvent("li > a", "click", (scope) => {
             var index = 0;
             self.getElements("li > a").forEach(function (elem, i) {
-                elem.parentNode.setAttribute("class", "nav-link");
+                elem.parentNode.setAttribute("class", "nav-item");
+                elem.setAttribute("class", "nav-link");
                 if (elem == scope) {
                     index = i;
                 }
             });
-            scope.parentNode.setAttribute("class", "nav-link active in");
+            scope.setAttribute("class", "nav-link active");
             var elements = self.getElements("cron-fields");
             elements.forEach((elem) => elem.parentNode.setAttribute("class", 'tab-pane fade"'));
-            elements[index].parentNode.setAttribute("class", "tab-pane active in");
+            elements[index].parentNode.setAttribute("class", "tab-pane active");
         });
         var formParent = self.querySelector(".cronInsideInput").closest("form");
         if (formParent != null) {
@@ -206,9 +207,14 @@ export class CronExpresionInput extends CronComponent {
         this.querySelector(".inputCronMsg").value = cronstrue.toString(value);
         this.sendEvent();
     }
+    
     modalToggle() {
-        this.getElement(".modal").classList.toggle("show");
+        if(!this.modal)
+           this.modal = new bootstrap.Modal(document.querySelector('.modal'), {});            
+             
+        this.modal.toggle();
     }
+
     generateCron(pos, values, value) {
         var val = values.split(" ");
         val[pos] = value;
