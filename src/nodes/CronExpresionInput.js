@@ -205,7 +205,7 @@ export class CronExpresionInput extends CronComponent {
         var input3 = this.getElement(".cronInsideInput");
         input3.value = value;
 
-        this.querySelector(".inputCronMsg").value = cronstrue.toString(value);
+        this.querySelector(".inputCronMsg").value = cronstrue.toString(value, {throwExceptionOnParseError: false});
         this.sendEvent();
     }
     
